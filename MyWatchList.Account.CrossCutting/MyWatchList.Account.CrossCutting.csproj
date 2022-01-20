@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyWatchList.Account.Data\MyWatchList.Account.Data.csproj" />
+    <ProjectReference Include="..\MyWatchList.Account.Domain\MyWatchList.Account.Domain.csproj" />
+    <ProjectReference Include="..\MyWatchList.Account.Services\MyWatchList.Account.Services.csproj" />
+  </ItemGroup>
+
+</Project>
