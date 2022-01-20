@@ -11,4 +11,9 @@
     <ProjectReference Include="..\MyWatchList.Account.Domain\MyWatchList.Account.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
+  </ItemGroup>
+
 </Project>
