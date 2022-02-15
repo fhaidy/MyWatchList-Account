@@ -8,7 +8,6 @@ namespace MyWatchList.Account.Domain.Extensions
         {
             var result = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, account.Email),
                 new Claim(ClaimTypes.Authentication, account.PasswordHash),
                 new Claim(ClaimTypes.Email, account.Email),
             };

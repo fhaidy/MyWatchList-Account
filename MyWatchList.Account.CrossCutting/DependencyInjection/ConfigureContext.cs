@@ -8,7 +8,7 @@ namespace MyWatchList.Account.CrossCutting.DependencyInjection
     {
         public static void ConfigureDependenciesRepository(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddDbContext<SqlContext>();
+            serviceCollection.AddDbContext<AccountContext>();
         }
     }
 }

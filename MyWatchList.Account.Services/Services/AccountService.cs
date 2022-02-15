@@ -11,12 +11,12 @@ namespace MyWatchList.Account.Services.Services
             _repository = repository;
         }
 
-        public async Task<Domain.Domain.Account> GetById(Guid id)
+        public async Task<Domain.Domain.Account?> GetByEmail(string email)
         {
-            return await _repository.SelectAsync(id);
+            return await _repository.SelectByEmail(email);
         }
 
-        public async Task<Domain.Domain.Account> Post(Domain.Domain.Account obj)
+        public async Task<Domain.Domain.Account?> Post(Domain.Domain.Account obj)
         {
             return await _repository.InsertAsync(obj);
         }

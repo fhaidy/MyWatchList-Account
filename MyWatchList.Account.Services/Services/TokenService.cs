@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using MyWatchList.Account.CrossCutting;
 using MyWatchList.Account.Domain.Extensions;
 
 namespace MyWatchList.Account.Services.Services
@@ -11,7 +12,7 @@ namespace MyWatchList.Account.Services.Services
         public string GenerateToken(Domain.Domain.Account account)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("6be68ff0-373a-416c-b904-2ae10c951e90");
+            var key = Encoding.ASCII.GetBytes(Configuration.JwtKey);
             var claims = account.GetClaims();
             var tokenDescriptor = new SecurityTokenDescriptor
             {

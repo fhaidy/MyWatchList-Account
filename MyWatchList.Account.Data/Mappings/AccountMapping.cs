@@ -9,11 +9,6 @@ namespace MyWatchList.Account.Data.Mappings
         {
             builder.ToTable("Accounts");
             builder.HasKey(account => account.Id);
-            builder.HasIndex(account => account.Username)
-                .IsUnique();
-            builder.Property(account => account.Username)
-                .IsRequired()
-                .HasMaxLength(16);
             builder.HasIndex(account => account.Email)
                 .IsUnique();
             builder.Property(account => account.Email)
